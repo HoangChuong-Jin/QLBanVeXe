@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="QLVXDataSet" targetNamespace="http://tempuri.org/QLVXDataSet.xsd" xmlns:mstns="http://tempuri.org/QLVXDataSet.xsd" xmlns="http://tempuri.org/QLVXDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLVXConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLVXConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.GUI_QLBV.Properties.Settings.GlobalReference.Default.QLVXConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tbl_VETableAdapter" GeneratorDataComponentClassName="tbl_VETableAdapter" Name="tbl_VE" UserDataComponentName="tbl_VETableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLVXConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT tbl_VE.MA_VE, tbl_VE.NgayBan, tbl_VE.NoiBan, tbl_GHE.So_Ghe, tbl_TUYEN.DiaDiemDi, tbl_TUYEN.DiaDiemDen, tbl_TUYEN.NgayChay, tbl_TUYEN.GiaGoc, tbl_TUYEN.So_Xe, tbl_HANHKHACH.TenHK
+FROM     tbl_VE INNER JOIN
+                  tbl_GHE ON tbl_VE.MA_GHE = tbl_GHE.MA_GHE INNER JOIN
+                  tbl_HANHKHACH ON tbl_VE.ID_HK = tbl_HANHKHACH.ID_HK INNER JOIN
+                  tbl_TUYEN ON tbl_VE.Ma_T = tbl_TUYEN.Ma_T</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MA_VE" DataSetColumn="MA_VE" />
+              <Mapping SourceColumn="NgayBan" DataSetColumn="NgayBan" />
+              <Mapping SourceColumn="NoiBan" DataSetColumn="NoiBan" />
+              <Mapping SourceColumn="So_Ghe" DataSetColumn="So_Ghe" />
+              <Mapping SourceColumn="DiaDiemDi" DataSetColumn="DiaDiemDi" />
+              <Mapping SourceColumn="DiaDiemDen" DataSetColumn="DiaDiemDen" />
+              <Mapping SourceColumn="NgayChay" DataSetColumn="NgayChay" />
+              <Mapping SourceColumn="GiaGoc" DataSetColumn="GiaGoc" />
+              <Mapping SourceColumn="So_Xe" DataSetColumn="So_Xe" />
+              <Mapping SourceColumn="TenHK" DataSetColumn="TenHK" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="QLVXDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="QLVXDataSet" msprop:Generator_UserDSName="QLVXDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl_VE" msprop:Generator_TableClassName="tbl_VEDataTable" msprop:Generator_TableVarName="tabletbl_VE" msprop:Generator_RowChangedName="tbl_VERowChanged" msprop:Generator_TablePropName="tbl_VE" msprop:Generator_RowDeletingName="tbl_VERowDeleting" msprop:Generator_RowChangingName="tbl_VERowChanging" msprop:Generator_RowEvHandlerName="tbl_VERowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_VERowDeleted" msprop:Generator_RowClassName="tbl_VERow" msprop:Generator_UserTableName="tbl_VE" msprop:Generator_RowEvArgName="tbl_VERowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MA_VE" msprop:Generator_ColumnVarNameInTable="columnMA_VE" msprop:Generator_ColumnPropNameInRow="MA_VE" msprop:Generator_ColumnPropNameInTable="MA_VEColumn" msprop:Generator_UserColumnName="MA_VE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NgayBan" msprop:Generator_ColumnVarNameInTable="columnNgayBan" msprop:Generator_ColumnPropNameInRow="NgayBan" msprop:Generator_ColumnPropNameInTable="NgayBanColumn" msprop:Generator_UserColumnName="NgayBan" type="xs:dateTime" />
+              <xs:element name="NoiBan" msprop:Generator_ColumnVarNameInTable="columnNoiBan" msprop:Generator_ColumnPropNameInRow="NoiBan" msprop:Generator_ColumnPropNameInTable="NoiBanColumn" msprop:Generator_UserColumnName="NoiBan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="So_Ghe" msprop:Generator_ColumnVarNameInTable="columnSo_Ghe" msprop:Generator_ColumnPropNameInRow="So_Ghe" msprop:Generator_ColumnPropNameInTable="So_GheColumn" msprop:Generator_UserColumnName="So_Ghe" type="xs:int" />
+              <xs:element name="DiaDiemDi" msprop:Generator_ColumnVarNameInTable="columnDiaDiemDi" msprop:Generator_ColumnPropNameInRow="DiaDiemDi" msprop:Generator_ColumnPropNameInTable="DiaDiemDiColumn" msprop:Generator_UserColumnName="DiaDiemDi">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DiaDiemDen" msprop:Generator_ColumnVarNameInTable="columnDiaDiemDen" msprop:Generator_ColumnPropNameInRow="DiaDiemDen" msprop:Generator_ColumnPropNameInTable="DiaDiemDenColumn" msprop:Generator_UserColumnName="DiaDiemDen">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NgayChay" msprop:Generator_ColumnVarNameInTable="columnNgayChay" msprop:Generator_ColumnPropNameInRow="NgayChay" msprop:Generator_ColumnPropNameInTable="NgayChayColumn" msprop:Generator_UserColumnName="NgayChay" type="xs:dateTime" />
+              <xs:element name="GiaGoc" msprop:Generator_ColumnVarNameInTable="columnGiaGoc" msprop:Generator_ColumnPropNameInRow="GiaGoc" msprop:Generator_ColumnPropNameInTable="GiaGocColumn" msprop:Generator_UserColumnName="GiaGoc" type="xs:double" />
+              <xs:element name="So_Xe" msprop:Generator_ColumnVarNameInTable="columnSo_Xe" msprop:Generator_ColumnPropNameInRow="So_Xe" msprop:Generator_ColumnPropNameInTable="So_XeColumn" msprop:Generator_UserColumnName="So_Xe">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TenHK" msprop:Generator_ColumnVarNameInTable="columnTenHK" msprop:Generator_ColumnPropNameInRow="TenHK" msprop:Generator_ColumnPropNameInTable="TenHKColumn" msprop:Generator_UserColumnName="TenHK">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tbl_VE" />
+      <xs:field xpath="mstns:MA_VE" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
